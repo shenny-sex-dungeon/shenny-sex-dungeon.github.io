@@ -284,6 +284,12 @@ function prev(){
     currentPage = currentPage - 1
     document.title = `Notty Tiffy | Page ${currentPage + 1}`
     document.getElementById('image').src = `./Tiffy-Images/${images[currentPage]}`
+
+    if(document.body.clientWidth < document.body.clientHeight){
+        if(document.getElementById('image').style.width > document.getElementById('image').style.height){
+            document.getElementById('image').style.top = '50%'
+        }
+    }
 }
 
 function next(){
@@ -291,4 +297,24 @@ function next(){
     currentPage = currentPage + 1
     document.title = `Notty Tiffy | Page ${currentPage + 1}`
     document.getElementById('image').src = `./Tiffy-Images/${images[currentPage]}`
+
+    // console.log(innerWidth,innerHeight)
+    // if(innerWidth < innerHeight){
+    //     let h = Number(window.getComputedStyle(document.getElementById('image')).getPropertyValue('height').replace('px',''))
+
+    //     let w = Number(window.getComputedStyle(document.getElementById('image')).getPropertyValue('width').replace('px',''))
+
+    //     console.log('y')
+    //     console.log(`width`,w)
+    //     console.log(`height`,h)
+    //     console.log(w > h)
+    //     if(w > h){
+    //         console.log('y')
+    //         document.getElementById('image').style.top = `${(innerHeight - h) / 3}px`
+    //         console.log(`${(innerHeight - h) / 3}px`)
+    //     } else {
+    //         console.log('n')
+    //         document.getElementById('image').style.top= '-10px'
+    //     }
+    // }
 }
