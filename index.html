@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notty Tiffy | Page 1</title>
+    <link rel="icon" href="./icon.png">
+</head>
+<style>
+    body{
+        background-color: black;
+        user-select: none;
+    }
+    div#left{
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+
+    div#right{
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 1;
+    }
+
+    img#image{
+        z-index: 0;
+        display: block;
+        margin-top: -10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        max-height: 100%;
+        max-width: 100%;
+
+        align-items: center;
+    }
+</style>
+<body>
+    <div id="left" onclick="prev()"></div>
+    <img src="./Tiffy-Images/0g10dppc3xf51.jpg" id="image">
+    <div id="right" onclick="next()"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
