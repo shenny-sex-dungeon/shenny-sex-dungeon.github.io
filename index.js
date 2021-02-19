@@ -280,15 +280,15 @@ let images = [
 
 let currentPage = 0
 function prev(){
-    if(currentPage + 1 > images.length) return;
-    currentPage = currentPage + 1
-    document.title = `Notty Tiffy | Page ${currentPage}`
+    if(currentPage - 1 < 0) currentPage = images.length
+    currentPage = currentPage - 1
+    document.title = `Notty Tiffy | Page ${currentPage + 1}`
     document.getElementById('image').src = `./Tiffy-Images/${images[currentPage]}`
 }
 
 function next(){
-    if(currentPage + 1 < 0) return;
+    if(currentPage + 1 > images.length - 1) currentPage = 0
     currentPage = currentPage + 1
-    document.title = `Notty Tiffy | Page ${currentPage}`
+    document.title = `Notty Tiffy | Page ${currentPage + 1}`
     document.getElementById('image').src = `./Tiffy-Images/${images[currentPage]}`
 }
